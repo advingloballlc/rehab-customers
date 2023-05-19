@@ -14,7 +14,7 @@ export default function PatientsPage() {
         setPatientRehab(patients);
         console.log(patientRehab);
       });
-  }, []);
+  });
 
   return (
     <div>

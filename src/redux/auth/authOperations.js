@@ -22,8 +22,18 @@ const logIn = createAsyncThunk("auth/admin", async (credentials) => {
   }
 });
 
+const logOut = createAsyncThunk("auth/admin", async () => {
+  try {
+    await axios.post("/auth/admin");
+    token.unset();
+  } catch (error) {
+    // TODO: Добавить обработку ошибки error.message
+  }
+});
+
 const operations = {
   logIn,
+  logOut,
 };
 
 export default operations;

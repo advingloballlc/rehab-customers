@@ -26,6 +26,7 @@ export default function PatientsPage() {
             <li key={user.time}>Дата проведення: {user.time}</li>
           </>
         ))}
+      <button>Вийти</button>
     </div>
   );
 }
